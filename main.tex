@@ -1,0 +1,46 @@
+%\documentclass[brazil, 10pt, notes]{beamer} % notes and text
+%\documentclass[brazil, 10pt, notes=only]{beamer} % notes only
+\documentclass[brazil, 10pt]{beamer} % text only
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[brazilian]{babel}
+\usepackage{hyperref}
+\usepackage{listings}
+
+\usetheme{JuanLesPins}
+\setbeamerfont{footnote}{size=\tiny}
+\beamertemplatenavigationsymbolsempty
+
+% Adds a footer with page numbers
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \insertframenumber/\inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+% Removes the "Figure:" prefix from figure captions
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\title{Introdução ao Gerencimanento de Ambientes Ruby}
+\author{Rafael Reggiani Manzo end Wilson Kazuo Mizutani}
+\institute{Instituto de Matemática e Estatística da Universidade de São Paulo}
+
+\begin{document}
+
+  \maketitle
+
+  % \include{introduction}
+  % \include{concepts}
+  % \include{tractography}
+  % \include{trac_sim_part}
+  % \include{proposal}
+  % \include{conclusion}
+\end{document}
+
