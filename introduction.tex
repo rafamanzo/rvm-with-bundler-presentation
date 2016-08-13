@@ -1,0 +1,57 @@
+
+\section{Motivação}
+
+\frame{
+  \frametitle{Ruby}
+  \pause
+  Linguagens, como qualquer outro programa, possuem versões!
+
+  \vspace{1em}
+  \begin{itemize}
+    \pause
+    \item No caso, Ruby tem lançamentos constantes
+          \pause
+          \begin{itemize}
+            \item Só em 2015, foram 12 versões novas entre minors a patches
+          \end{itemize}
+    \pause
+    \item Além disso, existem diferentes implementações
+          \pause
+          \begin{itemize}
+            \item JRuby
+            \item Rubinious
+            \item etc.
+          \end{itemize}
+    \pause
+    \item Como conciliar isso com um ambiente de desenvolvimento estável?
+  \end{itemize}
+}
+
+\begin{frame}
+  \frametitle{RubyGems}
+  \begin{columns}
+    \column[c]{.4\textwidth}
+      \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/favicon}
+      \end{center}
+    \column[c]{.6\textwidth}
+      \pause
+      ``Bibliotecas'' do Ruby
+
+      \vspace{1em}
+      \begin{itemize}
+        \pause
+        \item Cada gem tem uma versão
+        \pause
+        \item Gems dependem de outras gems
+        \pause
+        \item Diferentes para dev, testes e produção.
+        \pause
+        \item RubyGems.org
+      \end{itemize}
+  \end{columns}
+
+  \pause
+  \vspace{2em}
+  Mais um nível de complexidade no gerenciamento de versões em projetos!
+\end{frame}
