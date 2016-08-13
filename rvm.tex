@@ -1,0 +1,83 @@
+
+\section{Lidando com múltiplas versões de tudo}
+
+\frame{
+  \begin{center}
+    \LARGE Lidando com múltiplas versões de tudo
+  \end{center}
+}
+
+\frame{
+  \frametitle{rbenv vs. RVM}
+  \pause
+  \begin{columns}
+    \column[c]{.5\textwidth}
+      \textbf{rbenv}
+      \begin{itemize}
+        \item Usa \texttt{\$PATH}
+        \item Sem bash hacking
+        \item Sem cofig file
+        \item Não instala Ruby
+        \item Gemsets como plugin
+      \end{itemize}
+    \column[c]{.5\textwidth}
+      \textbf{RVM}
+      \begin{itemize}
+        \item Usa \textit{login shell}
+        \item Sobrescreve commandos shell
+        \item Com config file
+        \item Instala Ruby (ver adiante)
+        \item Gemsets out-of-the-box
+      \end{itemize}
+  \end{columns}
+}
+
+\subsection{RVM}
+
+\frame{
+  \frametitle{Instalação single-user}
+  \pause
+  Instala o RVM na \texttt{HOME} do usuário atual com dois comandos:
+  \begin{enumerate}
+    \pause
+    \item Instale a chave pública GPG:
+          \begin{block}{bash}
+            \texttt{gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6...}
+          \end{block}
+    \pause
+    \item Execute o script de instalação:
+          \begin{block}{bash}
+            \texttt{\textbackslash{}curl -sSL https://get.rvm.io | bash -s
+            stable}
+          \end{block}
+  \end{enumerate}
+
+  \pause
+  \vspace{1em}
+  Erros comuns:
+  \begin{itemize}
+    \item Não verificar o \texttt{.profile}
+    \item Não ativar \textit{login shell}
+  \end{itemize}
+
+  \pause
+  \vspace{1em}
+  Para mais informações veja \url{https://rvm.io/rvm/install}
+}
+
+\frame{
+  \frametitle{Instalando uma versão de ruby}
+}
+
+\frame{
+  \frametitle{Gemsets}
+}
+
+\frame{
+  \frametitle{Dotfiles}
+}
+
+\frame{
+  \frametitle{Comandos úteis}
+}
+
