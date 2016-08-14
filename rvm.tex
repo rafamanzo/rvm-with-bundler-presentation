@@ -124,9 +124,47 @@
 
 \frame{
   \frametitle{Dotfiles}
+  \pause
+  Simplificam o controle de versões de ruby e Gemsets por projeto
+  \begin{itemize}
+    \pause
+    \item \texttt{.ruby-version}: Indica a versão de ruby a ser usada. Exemplo:
+          \begin{block}{.ruby-version}
+            \texttt{ruby-2.1.1}
+          \end{block}
+    \pause
+    \item \texttt{.ruby-gemset}: Indica o Gemset usado. Exemplo:
+          \begin{block}{.ruby-gemset}
+            \texttt{myproject}
+          \end{block}
+  \end{itemize}
+
+  \pause
+  \vspace{1em}
+  Com \textit{login shell}, esses arquivos são reconhecidos automagicamente
 }
 
 \frame{
   \frametitle{Comandos úteis}
+  \begin{itemize}
+    \pause
+    \item Para saber a versão e Gemset atuais:
+          \begin{block}{bash}
+            \texttt{\$ rvm current \\
+                    ruby-2.1.1@myproject}
+          \end{block}
+    \pause
+    \item Para saber as versões de ruby instaladas:
+          \begin{block}{bash}
+            \texttt{\$ rvm list}
+          \end{block}
+    \pause
+    \item Para atualizar o RVM:
+          \begin{block}{bash}
+            \texttt{\$ rvm get stable \\
+                    \# Ou \\
+                    \$ rvm get head \# nightly}
+          \end{block}
+  \end{itemize}
 }
 
