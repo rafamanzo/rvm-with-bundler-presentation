@@ -42,12 +42,12 @@
     \pause
     \item Instale a chave pública GPG:
           \begin{block}{bash}
-            \texttt{gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6...}
+            \texttt{\$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6...}
           \end{block}
     \pause
     \item Execute o script de instalação:
           \begin{block}{bash}
-            \texttt{\textbackslash{}curl -sSL https://get.rvm.io | bash -s
+            \texttt{\$ \textbackslash{}curl -sSL https://get.rvm.io | bash -s
             stable}
           \end{block}
   \end{enumerate}
@@ -67,10 +67,59 @@
 
 \frame{
   \frametitle{Instalando uma versão de ruby}
+  \pause
+  Com o RVM pronto, você pode instalar a versão desejada de Ruby:
+
+  \pause
+  \begin{block}{bash}
+    \texttt{\$ rvm install 2.1.1}
+  \end{block}
+
+  \pause
+  Para saber as versões disponíveis:
+
+  \pause
+  \begin{block}{bash}
+    \texttt{\$ rvm list known}
+  \end{block}
+
+  \pause
+  Para mudar entre \textit{patches}:
+
+  \pause
+  \begin{block}{bash}
+    \texttt{\$ rvm ruby 2.1.1-p451}
+  \end{block}
 }
 
 \frame{
   \frametitle{Gemsets}
+  \pause
+  Ambientes isolados de ruby e suas gems
+  
+  \begin{itemize}
+    \pause
+    \item Cada Gemset pode usar todas as versões de ruby instaladas
+    \pause
+    \item Você pode mudar entre Gemsets à vontade
+    \pause
+    \item O RVM vem com uma Gemset global por padrão
+  \end{itemize}
+
+  \pause
+  Criando uma Gemset:
+
+  \begin{block}{bash}
+    \texttt{\$ rvm gemset create myproject \\
+            Gemset 'myproject' created}
+  \end{block}
+
+  \pause
+  Usando uma Gemset:
+
+  \begin{block}{bash}
+    \texttt{\$ rvm use 2.1.1@myproject}
+  \end{block}
 }
 
 \frame{
