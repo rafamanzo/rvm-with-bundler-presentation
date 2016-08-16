@@ -1,0 +1,99 @@
+\section{Gerenciamento de Dependências com Bundler}
+
+\frame{
+  \begin{center}
+    \LARGE Gerenciamento de Dependências com Bundler \\
+    \url{http://bundler.io/}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Gemfile / Gemfile.lock}
+  \pause
+
+  \begin{columns}
+    \column[c]{.5\textwidth}
+      \textbf{Gemfile}
+      \begin{itemize}
+        \item Um único arquivo com todas as dependências diretas do programa
+        \item Resolução de conflitos
+        \item Resolução de subdependências
+      \end{itemize}
+    \column[c]{.5\textwidth}
+      \textbf{Gemfile.lock}
+      \begin{itemize}
+        \item Fixa versões para todas as dependências
+        \item Permite consistência de versões entre todas as máquinas de instalação
+      \end{itemize}
+  \end{columns}
+
+}
+
+\frame{
+  \frametitle{Gemfile}
+  \framesubtitle{Sintaxe básica}
+  \pause
+
+  \begin{block}{Especificando versões}
+    \scriptsize \texttt{gem 'bundler', '> 1' } \\
+    \scriptsize \texttt{gem 'bundler', '>= 1' } \\
+    \scriptsize \texttt{gem 'bundler', '1.11.0' } \\
+    \scriptsize \texttt{gem 'bundler', '\textasciitilde> 1.12' \# >= 1.12.0 \&\& < 2.0.0} \\
+    \scriptsize \texttt{gem 'bundler', '\textasciitilde> 1.12.0' \# >= 1.12.0 \&\& < 1.13.0 } \\
+  \end{block}
+
+  \pause
+  \begin{block}{Usar versão do git}
+    \scriptsize \texttt{gem 'bundler', git: 'https://github.com/bundler/bundler' } \\
+    \scriptsize \texttt{gem 'bundler', git: 'https://github.com/bundler/bundler', ref: '4fe9193' } \\
+    \scriptsize \texttt{gem 'bundler', git: 'https://github.com/bundler/bundler', branch: 'master'  } \\
+    \scriptsize \texttt{gem 'bundler', git: 'https://github.com/bundler/bundler', tag: 'v1.12.5'  } \\
+  \end{block}
+}
+
+\frame{
+  \frametitle{Gemfile}
+  \framesubtitle{Sintaxe básica}
+  \pause
+
+  \begin{block}{Usar versão do sistema de arquivos}
+    \scriptsize \texttt{gem 'bundler', path: '/home/user/bundler' } \\
+  \end{block}
+
+  \pause
+  \begin{block}{Grupos / Environment}
+    \scriptsize \texttt{gem 'bundler' } \\
+    \scriptsize \texttt{ } \\
+    \scriptsize \texttt{group :development, :test do } \\
+    \scriptsize \texttt{  gem 'byebug' } \\
+    \scriptsize \texttt{end} \\
+    \scriptsize \texttt{ } \\
+    \scriptsize \texttt{ \# bundle install --without development test } \\
+  \end{block}
+}
+
+\frame{
+  \frametitle{Executando}
+  \framesubtitle{}
+
+  \pause
+  \begin{block}{install}
+    \scriptsize \texttt{bundle install --jobs=4 \# instala com 4 tarefas paralelas } \\
+  \end{block}
+
+  \pause
+  \begin{block}{update}
+    \scriptsize \texttt{bundle update \# atualiza todas as gems} \\
+    \scriptsize \texttt{bundle update bundler \# atualiza apenas o bundler} \\
+  \end{block}
+
+  \pause
+  \begin{block}{exec}
+    \scriptsize \texttt{bundle exec rake} \\
+  \end{block}
+
+  \pause
+  \begin{block}{outdated}
+    \scriptsize \texttt{bundle outdated} \\
+  \end{block}
+}
